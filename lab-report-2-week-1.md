@@ -50,9 +50,6 @@ Note: this was done using the TA account, not mine, since I was not able to logi
 * Next, compile and run the file using the `javac` and `java` commands.
 ![whereamiwindows111](https://user-images.githubusercontent.com/114317681/193394054-4046ac41-5440-4197-a489-d9c87c36218b.png)
     - As you can see, running this file on my computer will only print out facts about my computer: the OS, which is Windows 11, and the user's name, which is my name, Viann, but it doesn't print out the rest of the information. 
-    - If we run the file with the remote server account, however, we see something different: 
-    ![whereamilinux](https://user-images.githubusercontent.com/114317681/193394443-5f9e3464-d4a8-489f-ba19-0c77a8c6827d.png)
-    - The OS of the remote account, the name of the account, and the current directory. 
 
 * Now, let's run the `scp` command in order to copy the file:
 ![copyscp](https://user-images.githubusercontent.com/114317681/193394516-0baf5622-a6db-4f33-b813-c4fd2a0fe696.png)
