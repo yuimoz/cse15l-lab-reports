@@ -6,6 +6,6 @@ _Anyway, please enjoy the surprise below._
 
 [Lab Report 1, Week 0](https://yuimoz.github.io/cse15l-lab-reports/lab-report-1-week-0.html)
 
-_There is a link to my second lab report down below. It is a turorial and a walkthrough!_
+_There is a link to my other lab report down below. It is a turorial and a walkthrough!_
 
-[Lab Report 2, Week 1](https://yuimoz.github.io/cse15l-lab-reports/lab-report-2-week-1.html)
+[Lab Report 1, Week 1](https://yuimoz.github.io/cse15l-lab-reports/lab-report-2-week-1.html)
