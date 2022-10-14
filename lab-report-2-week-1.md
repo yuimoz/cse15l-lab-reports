@@ -5,6 +5,9 @@
 
 **Step 1. Install Visual Studio Code**
 
+**Note: This is an important step as having VSCode installed will make it easier for us to see what is going on as we write our webpage. In VSCode, we are able to see the outcome of whatever we are writing (left-hand side) on the right-hand size; like a split screen. We can identify any mistakes early on by having an image of what we are writing.**
+
+
 To download VSCode, navigate to the [Official VSCode Website](https://code.visualstudio.com/). Follow the instructions for a successful download. Once downloaded, your screen should look like this once you launch the application: 
 
 
@@ -15,8 +18,10 @@ To download VSCode, navigate to the [Official VSCode Website](https://code.visua
 
 * First, [Install OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui). Your pc might already have the **OpenSSH Client**, but not the **OpenSSH Server** (which was what happened in my case). Make sure both are installed. 
 * When those two are installed, follow the intructions on the website for the rest of the commands in order to ensure functionality. 
-* Then, launch VSCode, and open up a new terminal. Type out `$ ssh cs15fa22<>@ieng6.ucsd.edu`. You shouldn't write the `<>` in there, it is just a placeholder--you need to know what your CSE15L account is for this step (Note: [Your course-specific account can be found here](https://sdacs.ucsd.edu/~icc/index.php)). 
-* Before connecting, you will get a message asking if you want to keep connecting. Type 'yes.' (**NOTE**: Unfortunately, in my case, I was not able to remotely connect with my account, so I will be showing screenshots of remotely connecting with the TA's account instead).
+* Then, launch VSCode, and open up a new terminal. Type out `$ ssh cs15lfa22<>@ieng6.ucsd.edu`. You shouldn't write the `<>` in there, it is just a placeholder--you need to know what your CSE15L account is for this step.
+![image](https://user-images.githubusercontent.com/114317681/195715324-3035097d-add9-4fdc-bde9-2ec73fb0012d.png)
+(Note: [Your course-specific account can be found here](https://sdacs.ucsd.edu/~icc/index.php)). 
+* Before connecting, you will get a message asking if you want to keep connecting. Type 'yes.'
 * Once successfully connected, you will see the following in your terminal: 
 ![connected](https://user-images.githubusercontent.com/114317681/193378097-43708c5d-5b2f-4818-9e84-019c8b79a190.png)
 
@@ -59,8 +64,6 @@ Note: this was done using the TA account, not mine, since I was not able to logi
 
 **We just successfully copied a file from one computer to another remotely! :D**
 
-**Step 5. Setting an SSH Key (INCOMPLETE)**
-* Unfortunately, for this part, I was not able to complete it, as I ran out of time in the lab. Most of my time went into figuring out why I couldn't get access to my account remotely, and then I ended up using the TA account instead, but I ran out of time at that point and couldn't get to this step. 
 
 ---
 
