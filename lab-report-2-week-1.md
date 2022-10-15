@@ -23,7 +23,7 @@ To download VSCode, navigate to the [Official VSCode Website](https://code.visua
 (Note: [Your course-specific account can be found here](https://sdacs.ucsd.edu/~icc/index.php)). 
 * Before connecting, you will get a message asking if you want to keep connecting. Type 'yes.'
 * Once successfully connected, you will see the following in your terminal: 
-![connected](https://user-images.githubusercontent.com/114317681/193378097-43708c5d-5b2f-4818-9e84-019c8b79a190.png)
+![image](https://user-images.githubusercontent.com/114317681/195957563-06f210ff-3334-44ef-aea5-cf2000431ccb.png)
 
 **Congratulations! You have successfully connected to a remote server! :)**
 
@@ -43,12 +43,19 @@ What this command will do is basically show a list of all directories, and exist
 
 **Now you know how to run commands on a remote server! :D** 
 
-**Step 4. Moving Files with the `scp` command** 
-
-Note: this was done using the TA account, not mine, since I was not able to login. 
+**Step 4. Moving Files with the `scp` Command** 
 
 * Create a java file on on your computer called `WhereAmI.java`, with the following contents: 
-![whereamiscreenshot](https://user-images.githubusercontent.com/114317681/193379109-50bd8803-e9f9-4944-8ec9-95f931ce49d6.png)
+```
+class WhereAmI {
+    public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
+  }
+}
+```
 
 * Before compiling and running the file, type `exit` onto the terminal to exit the remote account. ![exit](https://user-images.githubusercontent.com/114317681/193379255-77e261b6-70a5-4e2c-9d74-b48b6d87deeb.png)
 
@@ -56,18 +63,105 @@ Note: this was done using the TA account, not mine, since I was not able to logi
 ![whereamiwindows111](https://user-images.githubusercontent.com/114317681/193394054-4046ac41-5440-4197-a489-d9c87c36218b.png)
     - As you can see, running this file on my computer will only print out facts about my computer: the OS, which is Windows 11, and the user's name, which is my name, Viann, but it doesn't print out the rest of the information. 
 
-* Now, let's run the `scp` command in order to copy the file:
+* Now, let's run the `scp` command in order to copy the file, as shown below:
+```
+scp WhereAmI.java cs15lfa22zz@ieng6.ucsd.edu:~/
+```
 ![copyscp](https://user-images.githubusercontent.com/114317681/193394516-0baf5622-a6db-4f33-b813-c4fd2a0fe696.png)
+
+Note: The `scp` command stands for "Secure Copy Protocol," and it does just that: securely copies a file from one host to the other, remotely. 
+
 * Upon completion, we run the `ssh` command, which will ensure a safe file transfer to our remote account: 
 ![ssh](https://user-images.githubusercontent.com/114317681/193394562-2bc84a92-b462-4ea3-859c-63342d37d19c.png)
     - As we can see, upon using the `ssh` command and we compile and run the `WhereAmI.java` file, we will get more information about our current remote account, as running these commands has printed out the OS, the name of the account, and even the directory of that account. 
 
 **We just successfully copied a file from one computer to another remotely! :D**
 
+**Step 5: Using an SSH key**
+
+* For this part, we will be generating something that is called an `ssh` key. More specifically, the command is `ssh-keygen`. We will be using this very useful command in order to diminish the time it takes for us to completely log in remotely and when using `scp`, as we repeatedly have to be typing in our password everytime. 
+* What `ssh-keygen` will do is fairly simple: it creates a pair of files, the "public key" and the "private key," and then the public key is copied to a particular location on the server, while the private key gets copied to a particular location on the client. After this, using the `ssh` command with this key already in place will allow us to use those files (the public and private keys) instead of our password. 
+* In order to set this up, you should type the following command on your computer/terminal:
+
+```
+$ ssh-keygen
+```
+
+Which should bring up something like this afterwards: 
+
+![image](https://user-images.githubusercontent.com/114317681/195959652-ce18a586-8281-4e3f-b455-cd34ca9d41d6.png)
+
+* Following this, another message will pop up, which wil ask you for which file you want to save the key in. Just press enter, as we are specifying the default path, which should be something like this (/Users/your name/.ssh/id_rsa).
+* It will then ask you for a "paraphrase." You can go ahead and type one in, but if you don't want any, then just press enter to leave it empty. 
+* If successful, your terminal should look something like this: 
+
+```
+PS C:\Users\Viann\OneDrive\Documents\GitHub\cse15l-lab-reports> ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\Viann/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in C:\Users\Viann/.ssh/id_rsa.
+Your public key has been saved in C:\Users\Viann/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:YGLAwtiIYQWR6me7yce/Q4tLLR8HLUGkjO9gk1ieOsY viann@DESKTOP-LCQR4P1
+The key's randomart image is:
++---[RSA 3072]----+
+|=O*.  .o         |
+|*oo.o o          |
+|.. oooo.         |
+|. +.+o .o        |
+|.. B . oS.       |
+|..oo+ ..o        |
+| Eo o+oo..       |
+|. o.o+ooo        |
+|   +o.o+o        |
++----[SHA256]-----+
+```
+
+* This has created two files on our system: the private key, which is in the file `id_rsa`, and the public key, which is in the file `id_rsa.pub`, all stored in the `.ssh` directory on our computer. 
+* Now, we need to copy the public key to the `.ssh` directory of our user account on the server. To do this, write out the following in your terminal: 
+
+```
+# on your client
+$ ssh cs15lfa22<>@ieng6.ucsd.edu
+
+(type out your password)
+```
+
+Note: the <> is a placeholder for the last two letters on your account. 
+
+* Then, while being in the server, 
+
+```
+# now on the server
+
+$ scp /Users/your name/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
+
+(Note: use your username and the path you saw from the command above)
+```
+* Once you do this, you should be able to `ssh` or `scp` from this client to the server without entering your password. 
+
+* Note: I will not be showing my screenshots for this part since I unfortunately couldn't get this to work for some reason, as I kept getting asked for my password when doing the `scp` part, and everytime I typed it out, it kept prompting me to keep inputing it. 
+
+**Step 6: Attempting for Remote Running to be even More Pleasant**
+
+* In this step, we will be attempting to come up with a stress-free process for making a local edit to the file we created previously, ``WhereAmI.java``, copying it to the remote server, and running it.
+* Here are a few hints:
+1) You are able to write a command in quotes at the end of an `ssh` command to directly run it on the remote server, and then exit. As an example, running this command will list the home directory on the remote server: 
+```
+$ ssh cs15fa22@ieng6.ucsd.edu "ls"
+```
+* Additionally, you are able to use semicolons to run multiple commands on the same line:
+
+```
+$ scp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI
+```
+Please note: as mentioned previously, I was unable to get my `ssh` part working from the previous step, which also prevented me from completing this step. 
 
 ---
 
-### With that, we have concluded this very short tutorial! Hopefully it was helpful as I walked you through what I did for my lab as well. Until later! 
+### With that, we have concluded this very short tutorial! Hopefully it was helpful as I walked you through what I did for my lab as well.
 
 
 
