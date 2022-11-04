@@ -4,8 +4,10 @@
 
 _Anyway, please enjoy the surprise below._
 
-[Lab Report 1, Week 0](https://yuimoz.github.io/cse15l-lab-reports/lab-report-1-week-0.html)
+[WEEK 0, LAB REPORT 1](https://yuimoz.github.io/cse15l-lab-reports/lab-report-1-week-0.html)
 
-_There is a link to my other lab report down below. It is a turorial and a walkthrough!_
+[WEEK 1, LAB REPORT 2](https://yuimoz.github.io/cse15l-lab-reports/lab-report-2-week-1.html)
 
-[Lab Report 1, Week 1](https://yuimoz.github.io/cse15l-lab-reports/lab-report-2-week-1.html)
+[WEEK 3, LAB REPORT 3](https://yuimoz.github.io/cse15l-lab-reports/lab-report-3-week-3.html)
+
+[WEEK 5, LAB REPORT 4]
