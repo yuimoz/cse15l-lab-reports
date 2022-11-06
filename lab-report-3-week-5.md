@@ -57,7 +57,11 @@ This particular command is useful, depending on how specific the search is. In t
 ```
 [cs15lfa22ig@ieng6-202]:technical:508$ grep -c "nature" plos/*
 ```
+
 *WARNING: LONG OUTPUT AHEAD* 
+
+*NOTE: I could've shortened this output by deleting some of it on this page, but I have decided not to for demonstration purposes.*
+
 ```
 plos/journal.pbio.0020001.txt:0
 plos/journal.pbio.0020010.txt:0
@@ -313,15 +317,7 @@ plos/pmed.0020278.txt:0
 plos/pmed.0020281.txt:0
 ```
 
-
-
-
-
-
-
-
-
-
+For this command, I am once again being somewhat specific, but just with the sub directory. Similar to the first example, I used the star * again. 
 
 
 
