@@ -1,5 +1,19 @@
 # Hello, world! Welcome to my page for CSE15L. 
 ---
+**MARKDOWN SYNTAX FOR REFERENCE**
+HEADINGS: # H1, ## H2, ### H3. 
+BOLD: ** <> **
+ITALICS: * <> *
+BLOCKQUOTE: > <>
+ORDERED LIST: 1., 2., 3. 
+UNORDERED LIST: -, -, -.
+CODE: ``.
+HORIZONTAL RULE: ---
+LINK: [](link)
+IMAGE: ![](image.jpg)
+
+---
+
 Below, you will find my lab reports, sorted by week. 
 
 [WEEK 0, LAB REPORT 0](https://yuimoz.github.io/cse15l-lab-reports/lab-report-1-week-0.html)
