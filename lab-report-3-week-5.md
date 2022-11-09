@@ -3,7 +3,7 @@
 
 ---
 
-*NOTE: For efficiency purposes, I have already done `cd docsearch` to go into the **docsearch** directory to access the multiple sub directories/files within it. I will not be showing how to do that in this lab report.*
+*NOTE: For efficiency purposes, I have already done `cd docsearch` and `cd technical` to go into the **technical** directory to access the multiple sub directories/files within it. I will not be showing how to do that in this lab report.*
 
 ## **1) `grep -c`**
 - This command will diplay the number of lines that contain the specified string in the files of the directory. 
@@ -57,6 +57,8 @@ This particular command is useful, depending on how specific the search is. In t
 ```
 [cs15lfa22ig@ieng6-202]:technical:508$ grep -c "nature" plos/*
 ```
+
+In this example, I am searching for how many times the word "nature" is in every file in the plos directory. 
 
 *WARNING: LONG OUTPUT AHEAD* 
 
@@ -317,7 +319,39 @@ plos/pmed.0020278.txt:0
 plos/pmed.0020281.txt:0
 ```
 
-For this command, I am once again being somewhat specific, but just with the sub directory. Similar to the first example, I used the star * again. 
+For this command, I am once again being somewhat specific,  but with the sub directory. Similar to the first example, I used the star * again. This time I am searching for how many times "nature" appears within every sub directory and file in the **plos** directory. Even though there were small instances of the word throughout the sub directories and the files, it still returned the number of times, even if the word was not mentioned at all. 
+
+This could be useful in the way that we could be technically hand-picking the files that don't have the word we are searching for, since the `grep -c` command will still show the files that don't have the searched string, returning for each file. In other words, this command could be useful for knowing what files don't have the word we need and that way we can get rid of them. 
+
+## **2) `grep -r`**
+- This command is similar to `grep -c`, with the exception that it doesn't count how many times the specified string is counted. Instead, `grep -r` will return the lines themselves that contain the specified string, along with what directory it is found in (if the directory is not specified).
+- In other words, it will search for the string across all the files found within the directory or specified directory/sub directory. 
+
+
+**EXAMPLE #1: `grep -r "Kill"`**
+
+```
+[cs15lfa22ig@ieng6-203]:technical:516$ grep -r "Kill"
+```
+
+For this command, I am looking for the specific instances of the word "Kill" within every sub directory and files of the main directory, docsearch. Following this command, this is the output: 
+
+```
+biomed/1471-2121-2-6.txt:          measured according to the methods of Killilea et al. [
+biomed/1471-2172-3-9.txt:        cytotoxic cells that lyse tumor targets. Natural Killer
+biomed/1471-2172-3-9.txt:        cause neither an increase in the Natural Killer phenotype
+biomed/1471-2172-3-9.txt:        to Lymphokine Activated Killer activity, reaffirming that
+biomed/1471-2172-3-9.txt:        LAK - Lymphokine Activated Killer
+biomed/1471-2172-3-9.txt:        NK - Natural Killer cells.
+biomed/1471-2180-2-35.txt:        Superbug Killers, News Week, Dec. 17, 2001 50-51) and, of
+biomed/1476-4598-1-5.txt:          B cells Natural Killer cells) by 4 hour adherence step.
+plos/journal.pbio.0020112.txt:        When Food Kills: BSE, E. coli,
+```
+This output displays all the instances of the word "Kill" across all sub directories and files within the technical directory. Instead of counting the instance of the word, like `grep -c` would, it returns the whole line containing the word, even if it is not a complete sentence (as shown above). Furthermore, we did not have to specify a sub directry to look for this word in, which is extremely convenient. 
+
+This command might be helpful when looking for an exact sentence mentioning the desired word, and that way once you find the line you could go into the file that contains it and do whatever is needed (copying the line, editing the line, pasting something into the line, etc). 
+
+
 
 
 

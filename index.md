@@ -1,6 +1,7 @@
 # Hello, world! Welcome to my page for CSE15L. 
 ---
 **MARKDOWN SYNTAX FOR REFERENCE**
+
 HEADINGS: # H1, ## H2, ### H3. 
 
 BOLD: ** <> **
@@ -15,11 +16,7 @@ UNORDERED LIST: -, -, -.
 
 CODE: ``.
 
-HORIZONTAL RULE: ---
-
-LINK: [](link)
-
-IMAGE: ![](image.jpg)
+HORIZONTAL RULE: ---.
 
 ---
 
