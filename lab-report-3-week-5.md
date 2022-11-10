@@ -347,9 +347,155 @@ biomed/1471-2180-2-35.txt:        Superbug Killers, News Week, Dec. 17, 2001 50-
 biomed/1476-4598-1-5.txt:          B cells Natural Killer cells) by 4 hour adherence step.
 plos/journal.pbio.0020112.txt:        When Food Kills: BSE, E. coli,
 ```
-This output displays all the instances of the word "Kill" across all sub directories and files within the technical directory. Instead of counting the instance of the word, like `grep -c` would, it returns the whole line containing the word, even if it is not a complete sentence (as shown above). Furthermore, we did not have to specify a sub directry to look for this word in, which is extremely convenient. 
+This output displays all the instances of the word "Kill" across all sub directories and files within the technical directory. Instead of counting the instance of the word, like `grep -c` would, it returns the whole line containing the word, even if it is not a complete sentence (as shown above).
 
-This command might be helpful when looking for an exact sentence mentioning the desired word, and that way once you find the line you could go into the file that contains it and do whatever is needed (copying the line, editing the line, pasting something into the line, etc). 
+ Furthermore, we did not have to specify a sub directry to look for this word in, which is extremely convenient. 
+
+This command might be helpful when looking for an exact sentence mentioning the desired word, and that way once you find the line you could go into the file that contains it and do whatever is needed (copying the line, editing the line, pasting something into the line, etc)--take writing an essay for example. 
+
+**EXAMPLE #2: `grep -r "medic" 911report/*.txt`**
+
+```
+[cs15lfa22ig@ieng6-203]:technical:520$ grep -r "medic" 911report/*.txt
+```
+
+In this example, my goal is to find all sentences containing the word "medic," especifically within the 911report sub directory. Notice that I used the star * again, and after .txt; essentially what this means is that I am looking for "medic" within 911reports, across all files that end with ".txt"--hence, the star * is used. 
+
+```
+911report/chapter-1.txt:    At 8:41, Sweeney told Woodward that passengers in coach were under the impression that there was a routine medical emergency in first class. Other flight attendants were busy at duties such as getting medical supplies while Ong and Sweeney were reporting the events.
+911report/chapter-10.txt:                medical assistance teams.
+911report/chapter-11.txt:                medications. What is missing is the attending physician who makes sure they work as
+911report/chapter-13.4.txt:                described the two Saudis as sons of a sick father who was seeking medical treatment       
+911report/chapter-13.5.txt:                11,2001,08:47:20-09:54:29. For the paramedic, see FDNY interview 32, Chief (Feb. 9,       
+911report/chapter-13.5.txt:                were appropriate is still a subject for medical and scientific debate. See EPA
+911report/chapter-3.txt:                the attack, offer medical and technical advice, and coordinate state and local
+911report/chapter-3.txt:                medical services, air traffic control, financial services, telephone systems, and
+911report/chapter-5.txt:                the cover story that he would be visiting a medical clinic to obtain a new
+911report/chapter-5.txt:                    in the German army before obtaining a medical discharge, and lived with Atta and
+911report/chapter-5.txt:                    Hamburg in 1998, where he studied medical technology. Soon after moving to
+911report/chapter-9.txt:                medical service, and building safety professionals.
+911report/chapter-9.txt:            Emergency medical services (EMS) personnel were directed to one of four triage areas
+911report/chapter-9.txt:                specific casualty reports. In addition, many ambulance paramedics from private
+911report/chapter-9.txt:                injured-they need to get a medic and a stretcher to this floor, and described the
+911report/chapter-9.txt:                9:57, an EMS paramedic approached the FDNY Chief of Department and advised that an
+911report/chapter-9.txt:                and medical response from Arlington County at the U.S. military's headquarters-a
+```
+The output is exactly what we are expecting: parts of sentences containing the word we are looking for, across all files ending with ".txt." 
+
+Recalling the previous example, this example could also be helpful in a similar way. Using `grep -r` and being specific about the sub directory could be really helpful if we want to, for example, remember the name of a file but we only know the contents of it. This way, we could use this command with the word we want to look for, across all files, and find the name of the file we want (or files). 
+
+**EXAMPLE #3: `grep -r "tech" government/Media/Using_Tech_Tools.txt`**
+
+```
+[cs15lfa22ig@ieng6-203]:technical:534$ grep -r "tech" government/Media/Using_Tech_Tools.txt
+```
+For this example, I am being extremely specific about the word I am looking for and where I want to look for it, as I also specified the file to look in. I am basically telling the terminal "go into this directory and its sub directory, and into this specific file, and look for this specific word." 
+
+```
+technology, such as Internet connections. Those places need
+But as lawyers try to meet demands with technology, the basic
+When small firms and solos do use technology to help smaller
+```
+The output, as we can see, is not long, but we do have what we are looking for.
+
+In a similar sense to the previously discussed example (EXAMPLE #2 FOR THIS COMMAND), this command could be helpful if we want to make sure a word is in a specific file. In the previous example, I mentioned how we could use that command to remember the name of a file if we only know the contents of it. For this command, we could use it as means of ensuring that the particular word is in a specific file. If this command doesn't return anything, then we can delete it or edit it so that it contains the word. 
+
+
+
+
+## **3) `grep -l`**
+- This command holds somewhat of the previous two ideas discussed, in the sense that it also incorporates a specific string to search for. However, the difference between `grep -l` to the previous commands discussed is that instead of printing out a sentence where the word we're looking for is, or printing the count of the instances of that word, this command will **return the path(s) where the word is found.**
+- ***Note: When using `grep -l`, you MUST specify the directory where you are looking for the specified string.***
+- Its behavior will be demonstrated with the following three examples below. 
+
+**EXAMPLE #1: `grep -l "abuse" government/Media/*`**
+
+```
+[cs15lfa22ig@ieng6-203]:technical:565$ grep -l "abuse" government/Media/*
+```
+
+
+```
+government/Media/A_Perk_of_Age.txt
+government/Media/Abuse_penalties.txt
+government/Media/All_May_Have_Justice.txt
+government/Media/Annual_Fee.txt
+government/Media/Avoids_Budget_Cut.txt
+government/Media/Boone_legal_service.txt
+government/Media/Butler_Co_attorneys.txt
+government/Media/City_Council_Budget.txt
+government/Media/CommercialAppealMemphis2.txt
+government/Media/Domestic_Violence_Ruling.txt
+government/Media/Domestic_violence_aid.txt
+government/Media/Few_who_need.txt
+government/Media/Firm_to_the_Poor_Needs_Help.txt
+government/Media/Funding_May_Limit.txt
+government/Media/Hard_to_Get.txt
+government/Media/Helping_Hands.txt
+government/Media/Higher_Registration_Fees.txt
+government/Media/Legal-aid_chief.txt
+government/Media/Legal_Aid_campaign.txt
+government/Media/Legal_Aid_in_Clay_County.txt
+government/Media/Low-income_children.txt
+government/Media/Marylands_Legal_Aid.txt
+government/Media/Too_Crucial_to_Take_Cut.txt
+government/Media/Understanding.txt
+government/Media/Using_Tech_Tools.txt
+government/Media/Weak_economy.txt
+government/Media/Workers_aid_center.txt
+government/Media/fight_domestic_abuse.txt
+```
+
+**EXAMPLE 2: `grep -l "dioxide" biomed/*`**
+
+```
+[cs15lfa22ig@ieng6-203]:technical:571$ grep -l "dioxide" biomed/*
+```
+
+```
+grep -l "dioxide" biomed/*
+biomed/1471-2105-1-1.txt
+biomed/1471-213X-1-9.txt
+biomed/1471-2180-2-22.txt
+biomed/1471-2180-3-4.txt
+biomed/1471-2415-3-3.txt
+biomed/1472-6793-2-4.txt
+biomed/1472-6793-3-4.txt
+biomed/1472-6793-3-5.txt
+biomed/1472-6831-3-1.txt
+biomed/1475-2867-3-12.txt
+biomed/1476-069X-1-3.txt
+biomed/1476-069X-2-4.txt
+biomed/cc1495.txt
+biomed/cc1538.txt
+biomed/cc1856.txt
+biomed/cc1882.txt
+biomed/cc2172.txt
+biomed/cc3.txt
+biomed/cc4.txt
+biomed/gb-2001-2-10-research0041.txt
+biomed/gb-2001-3-1-research0001.txt
+biomed/rr172.txt
+```
+
+
+**EXAMPLE #3: `grep -l "oxygen" plos/journal*.txt`**
+
+```
+[cs15lfa22ig@ieng6-203]:technical:583$ grep -l "oxygen" plos/journal*.txt
+```
+
+```
+plos/journal.pbio.0020012.txt
+plos/journal.pbio.0020150.txt
+plos/journal.pbio.0020272.txt
+plos/journal.pbio.0020302.txt
+plos/journal.pbio.0020348.txt
+plos/journal.pbio.0020400.txt
+plos/journal.pbio.0030102.txt
+```
+
+
 
 
 
