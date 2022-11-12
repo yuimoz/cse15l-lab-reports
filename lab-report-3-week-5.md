@@ -413,7 +413,7 @@ In a similar sense to the previously discussed example (EXAMPLE #2 FOR THIS COMM
 ```
 [cs15lfa22ig@ieng6-203]:technical:565$ grep -l "abuse" government/Media/*
 ```
-
+Here, my goal is to look for the word "abuse" within the government/Media/ sub directory--especifically, all the files within the sub directory Media that contains the word. 
 
 ```
 government/Media/A_Perk_of_Age.txt
@@ -446,14 +446,17 @@ government/Media/Workers_aid_center.txt
 government/Media/fight_domestic_abuse.txt
 ```
 
+This is the outcome. As intended, it is reflective of our command, as it is only looking at the sub directory Media within the directory government. This command is useful when searching within a specific sub directory. As you can see, we get every path within the sub directory Media and every file that contains the word "abuse," or even file names that have "abuse" in them--could be useful for remembering the full name of a file. 
+
 **EXAMPLE 2: `grep -l "dioxide" biomed/*`**
 
 ```
 [cs15lfa22ig@ieng6-203]:technical:571$ grep -l "dioxide" biomed/*
 ```
 
+For this command, the intent is to get every path with every file, within the sub directory biomed, that contains the word "dioxide." 
+
 ```
-grep -l "dioxide" biomed/*
 biomed/1471-2105-1-1.txt
 biomed/1471-213X-1-9.txt
 biomed/1471-2180-2-22.txt
@@ -477,13 +480,14 @@ biomed/gb-2001-2-10-research0041.txt
 biomed/gb-2001-3-1-research0001.txt
 biomed/rr172.txt
 ```
-
+As a result, we get a couple paths. We can see that I am being a being more specific here but still using the star * command, in order to get every single file with the word I'm looking for. This is helpful when knowing the name of the sub directory you want to search in, but not knowing the names of the files that contain said word. 
 
 **EXAMPLE #3: `grep -l "oxygen" plos/journal*.txt`**
 
 ```
 [cs15lfa22ig@ieng6-203]:technical:583$ grep -l "oxygen" plos/journal*.txt
 ```
+This example is almost extremely specific. The goal here is to look for any paths that contain the word "oxygen" within the plos directory, ***and*** within any files that start with or contain the word "journal" and end with ".txt." Notice how we are using the star * command again, which is how we are looking for every single file ending with ".txt.". 
 
 ```
 plos/journal.pbio.0020012.txt
@@ -494,8 +498,7 @@ plos/journal.pbio.0020348.txt
 plos/journal.pbio.0020400.txt
 plos/journal.pbio.0030102.txt
 ```
-
-
+We get a few paths as a result. Narrowing the outcome in this way is very useful, especially in this case. If you know the directory, and what the file's name might contain or start with, and you are certain that the file contains the word you're searching for, you can check out each individual path, since there's not a lot (as opposed to searching throughout 30 paths, here you could search throughout 7 paths). This is useful in practically any situation, but could come in handy when you are perhaps a little tight on time. 
 
 
 
