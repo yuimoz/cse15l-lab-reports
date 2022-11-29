@@ -30,4 +30,6 @@ Below, you will find my lab reports, sorted by week.
 
 [WEEK 5, LAB REPORT 3](https://yuimoz.github.io/cse15l-lab-reports/lab-report-3-week-5.html)
 
+[WEEK 7, LAB REPORT 4](https://yuimoz.github.io/cse15l-lab-reports/lab-report-4-week-7.html)
+
 [WEEK 9 AND 10, LAB REPORT 5](https://yuimoz.github.io/cse15l-lab-reports/lab-report-5-week-9.html)

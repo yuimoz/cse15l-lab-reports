@@ -1,6 +1,8 @@
 # **LAB REPORT: GRADING SCRIPT**
 
-In this lab report, I will be demonstrating the behavior of my `grade.sh` grading script on multiple sample student submissions. 
+### In this lab report, I will be demonstrating the behavior of my `grade.sh` grading script on multiple sample student submissions. 
+
+---
 
 ## **PART 1: MY GRADING SCRIPT** 
 ```
