@@ -47,11 +47,11 @@
 
         * Pressing *n* once
 
-            ![image](https://user-images.githubusercontent.com/114317681/204497002-752c12b1-8d42-4014-ba53-e1afe4db07c0.png)
+            ![Image](https://user-images.githubusercontent.com/114317681/204497002-752c12b1-8d42-4014-ba53-e1afe4db07c0.png)
 
         * Pressing *.* once 
 
-            ![image](https://user-images.githubusercontent.com/114317681/204497449-613d9ab0-5f10-4a04-b24f-616847a274e4.png)
+            ![Image](https://user-images.githubusercontent.com/114317681/204497449-613d9ab0-5f10-4a04-b24f-616847a274e4.png)
 
 
 5) Now, we just keep repeating the above step until we cover every instance of the word "start"
@@ -68,7 +68,7 @@
 
     * Note: if we press **n** again to look for more instances of "start," we will see the following message: 
 
-    ![image](https://user-images.githubusercontent.com/114317681/204498608-4ccd42d1-ea61-4e9e-b17b-5b2d6c9f590d.png)
+    ![Image](https://user-images.githubusercontent.com/114317681/204498608-4ccd42d1-ea61-4e9e-b17b-5b2d6c9f590d.png)
 
 
 6) After all of this, we are done! Now we just need to save the file and exit `vim`. To do so, we press : w (to save) q (to quit)
@@ -76,7 +76,7 @@
     * TRACING KEYSTROKES:
         * *:* *w* *q*
 
-            ![image](https://user-images.githubusercontent.com/114317681/204499580-eddb6e39-7636-4aec-8b96-dccd5ede9068.png)
+            ![Image](https://user-images.githubusercontent.com/114317681/204499580-eddb6e39-7636-4aec-8b96-dccd5ede9068.png)
 ---
 
 ## **PART 2: `SCP` TEST (LOCAL VS. REMOTE), QUESTIONS** 
