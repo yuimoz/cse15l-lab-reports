@@ -79,11 +79,28 @@
             ![image](https://user-images.githubusercontent.com/114317681/204499580-eddb6e39-7636-4aec-8b96-dccd5ede9068.png)
 ---
 
-## **PART 2: QUESTIONS** 
+## **PART 2: `SCP` TEST (LOCAL VS. REMOTE), QUESTIONS** 
 
-### 1) Which of these two styles would you prefer using if you had to work on a program that you were running remotely, and why?
+### **⮞ TESTS**
+#### *LOCAL EDIT, `SCP` TO REMOTE*
+* This test took me around 1:30 min to do, at most. I ran into a couple typos while typing out what directory I wanted the file to be `scp`'d into. Editing the file locally was also increased how long the total test took since I was not able to rely on `vim` for edits and special commands (which is what I did above).
 
-- If the program is running remotely, I would like to use Vscode or some other software that I've used for a while and that I'm extremely familiar with. 
+#### *REMOTE EDIT WITH `VIM`*
+* This test was much faster to compute than the last test, taking me around 40.15 seconds in total. Something that lowered this time was the fact that I had already used an `ssh` key, which saved time by not having to type out the password. 
 
 
-### 2) What about the project or task might factor into your decision one way or another? (If nothing would affect your decision, say so and why!)
+### **⮞ QUESTIONS**
+
+#### *1) Which of these two styles would you prefer using if you had to work on a program that you were running remotely, and why?*
+
+- If I were working on a remotely ran program, I would prefer using `vim`, as I would be saving a lot of time by not having to `scp` the file back and forth (in a similar style to the first test computed above). Additionally, `vim` offers many useful commands to make changes to a file or program, which promotes its efficiency.
+    * To summarize, I would choose `vim` for working on projects *remotely* due to its capability to save a lot of time and effort. 
+
+#### *2) What about the project or task might factor into your decision one way or another? (If nothing would affect your decision, say so and why!)*
+
+- What would affect my decision about which method to use would definitely be the size of the file (in terms of code) and/or how many files are within the project that I have to edit and debug thoroughly. In this case, I would prefer using some other editing software that I am extremely familiar and comfortable with, such as VS Code, since I would have a lot of flexibility. 
+    * For example, I might want to highlight code to edit with my cursor, however if I'm using `vim` I would probably forget that I cannot use my cursor there but rather certain keys on the keyboard to move around. I feel like this would just make me waste more time since I am not completely familiarized with  `vim` enough to thoroughly edit a project. 
+        * Perhaps in the future when I have more experience with `vim` I might choose to use it over any other software for its efficiency (as mentioned above). :)
+
+---
+
