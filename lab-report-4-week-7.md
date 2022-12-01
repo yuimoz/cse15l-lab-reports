@@ -15,9 +15,9 @@
     * :wq `<Enter>`
 
 1) When starting up DocSearchServer.java in `vim`, the cursor will be directly at the top left of the file, highlighting the very first character: 
-    * TRACING KEYSTROKES: 
-    
-        * *vim* *DocSearchServer.java* *`<Enter>`*
+* TRACING KEYSTROKES: 
+    * *vim* *DocSearchServer.java* *`<Enter>`*
+
 ![Image](https://user-images.githubusercontent.com/114317681/204490469-2eac285c-3b01-4588-9d35-6e221fc43980.png)
 
 2) We then type **/start** `<Enter>` in order for the cursor to jump to the first occurrence of the word "start," as demonstrated in this screenshot: 
