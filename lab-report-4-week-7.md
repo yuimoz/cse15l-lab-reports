@@ -75,7 +75,7 @@
     * TRACING KEYSTROKES:
         * *:* *w* *q*
 
-            ![Image](https://user-images.githubusercontent.com/114317681/204499580-eddb6e39-7636-4aec-8b96-dccd5ede9068.png)
+            ![Image](cse15l-lab-reports/wq.png)
 ---
 
 ## **PART 2: `SCP` TEST (LOCAL VS. REMOTE), QUESTIONS** 
