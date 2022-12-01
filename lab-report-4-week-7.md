@@ -102,5 +102,4 @@
     * For example, I might want to highlight code to edit with my cursor, however if I'm using `vim` I would probably forget that I cannot use my cursor there but rather certain keys on the keyboard to move around. I feel like this would just make me waste more time since I am not completely familiarized with  `vim` enough to thoroughly edit a project. 
         * Perhaps in the future when I have more experience with `vim` I might choose to use it over any other software for its efficiency (as mentioned above). :)
 
----
 
