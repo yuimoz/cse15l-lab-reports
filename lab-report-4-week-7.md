@@ -22,6 +22,7 @@
 2) We then type **/start** `<Enter>` in order for the cursor to jump to the first occurrence of the word "start," as demonstrated in this screenshot: 
 * TRACING KEYSTROKES: 
     * */start* *`<Enter>`*
+    
 ![Image](https://user-images.githubusercontent.com/114317681/204491625-219bb345-a4cd-46d1-9790-0db0f7da5265.png)
 
 3) Now, we should type **cgn base** first, which will make `vim` go into **Insert** mode, delete the highlighted word ("start") and will let us replace it with something else. In this case, we will type "base," and we press the `<Esc>` key to return to normal mode, as shown below: 
